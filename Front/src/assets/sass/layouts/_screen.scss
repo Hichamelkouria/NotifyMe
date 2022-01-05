@@ -1,0 +1,92 @@
+.screen-container,
+.authenticated-screen-container {
+  &__children {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: $desktopWidth;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: map-get($colors, "white");
+  }
+}
+
+.screen-container {
+  &__wrapper-with-cover-bg {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-size: cover;
+
+    .screen-container__children,
+    .layout-connection-with-img {
+      background: transparent;
+      min-height: auto;
+    }
+    &__child {
+      display: flex;
+      flex: 1 0 auto;
+
+      .screen-container__children {
+        max-width: $desktopWidth;
+        margin: auto;
+      }
+    }
+
+    &__center {
+      display: flex;
+      flex: 1;
+      .screen-container__children {
+        align-items: center;
+        justify-content: center;
+        margin: 2%;
+        max-width: 100%;
+      }
+    }
+
+    .footer {
+      margin-top: 4rem;
+    }
+  }
+}
+
+.header-containter-with-bg {
+  background-size: cover;
+  background: #fff;
+  margin-bottom: 4rem;
+
+  &__children {
+    padding: 1.5rem 2.5%;
+    max-width: $desktopWidth;
+    margin: auto;
+  }
+
+  img {
+    height: 3.249rem;
+  }
+}
+
+.authenticated-screen-container {
+  background-color: map-get($colors, "white");
+}
+
+.authenticated-screen-main-content {
+  padding: 0;
+  max-width: $desktopWidth;
+  margin: auto;
+
+  &__inner {
+    padding: 3.75rem 2.5% 0;
+  }
+}
+
+.screen-container-simple-layout {
+  width: 100%;
+  height: 100vh;
+  background-color: map-get($colors, "white");
+
+  &__children {
+    max-width: 720px;
+    margin: auto;
+  }
+}
